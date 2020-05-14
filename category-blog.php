@@ -4,12 +4,14 @@
 <div class="container">
 <div class="row">
 
-  <div class="col-lg-4 widget pl-5">
-    <?php if(is_active_sidebar('blog-sidebar')) :?>
-      <?php dynamic_sidebar('blog-sidebar'); ?>
+  <div class="col-lg-3 widget">
+        <?php if(is_active_sidebar('blog-sidebar')) :?>
+          <?php dynamic_sidebar('blog-sidebar'); ?>
 
-    <?php endif; ?>
+        <?php endif; ?>
   </div>
+
+
   <div class="col-lg-8">
       <?php get_template_part('includes/section','archive'); ?>
    <?php previous_posts_link();  ?>

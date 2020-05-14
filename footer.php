@@ -1,5 +1,4 @@
-<footer class="bg-dark container">
-  <div class="container">
+<footer class="bg-yellow px-3 py-3 mt-5">
   <?php
   wp_nav_menu(
     array(
@@ -8,9 +7,7 @@
     )
   );
   ?>
-</div>
-
-<p>Copyright @2020</p>
+<h5 class="text-white text-center">Copyright @2020</h5>
 
 </footer>
 

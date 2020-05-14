@@ -1,4 +1,4 @@
-<div class="bg-info">
+<div class="">
 <?php
 if (have_posts()) :
   while (have_posts()):

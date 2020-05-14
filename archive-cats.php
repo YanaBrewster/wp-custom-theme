@@ -5,19 +5,19 @@
 <div class="container">
 
   <section class="row">
-    <div class="col-lg-3 widget">
 
-      <?php if(is_active_sidebar('page-sidebar')) :?>
-        <?php dynamic_sidebar('page-sidebar'); ?>
+    <div class="col-lg-3 col-sm-12 widget">
+          <?php if(is_active_sidebar('page-sidebar')) :?>
+            <?php dynamic_sidebar('page-sidebar'); ?>
 
-      <?php endif; ?>
+          <?php endif; ?>
     </div>
 
-    <div class="col-lg-9">
 
-      <!-- <h1> <?php //echo single_cat_title(); ?> </h1> -->
+    <div class="col-lg-9 col-sm-12 mx-auto">
+
       <?php get_template_part('includes/section','cats'); ?>
-      <!-- Pagination Method 1 -->
+      <!-- Pagination -->
    <?php previous_posts_link();  ?>
    <?php next_posts_link();  ?>
 

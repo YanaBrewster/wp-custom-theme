@@ -1,4 +1,4 @@
-<div class="bg-info">
+<div class="">
 <?php
 if (have_posts()) :
   while (have_posts()):
@@ -19,8 +19,10 @@ if (have_posts()) :
     <?php
     the_excerpt();//cut of some portion of text
     ?>
+    <div class="mx-auto">
+      <a href="<?php the_permalink(); ?>" class="text-light btn btn-dark text-center"> Read More </a>
+    </div>
 
-    <a href="<?php the_permalink(); ?>" class="text-light btn btn-dark"> Read more </a>
   </div>
 </div>
   <?php endwhile;
