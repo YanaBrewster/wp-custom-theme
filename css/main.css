@@ -11,7 +11,8 @@
 
 p{
 font-family: 'Roboto', sans-serif;
-color: black;
+color: #333;
+font-size: 1.250em
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -19,13 +20,13 @@ font-family: 'Roboto Slab', serif;
 color: #ffce3b;
 }
 
-button{
+.btn-font{
 font-family: 'Roboto Slab', serif;
 }
 
 li, a{
 font-family: 'Roboto', sans-serif;
-color: black;
+color: #333;
 }
 
 /* Background Colours */
@@ -53,4 +54,12 @@ padding-right: 20px;
 li, a{
 list-style-type: none;
 font-size: 1.25em;
+}
+
+/* Layout */
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -3,6 +3,13 @@
 <section class="page-wrap">
 <div class="container">
 
+  <div id="sidebar-primary" class="sidebar col-lg-3 col-sm-12">
+      <?php if ( is_active_sidebar( 'primary' ) ) : ?>
+          <?php dynamic_sidebar( 'primary' ); ?>
+      <?php else : ?>
+      <?php endif; ?>
+  </div>
+
     <?php if(has_post_thumbnail()): ?>
         <!-- This has a featured image -->
 

@@ -4,11 +4,12 @@
 <div class="container">
 <div class="row">
 
-  <div class="col-lg-3 widget">
-        <?php if(is_active_sidebar('blog-sidebar')) :?>
-          <?php dynamic_sidebar('blog-sidebar'); ?>
-
-        <?php endif; ?>
+  <div id="sidebar-secondary" class="sidebar col-lg-3 col-sm-12">
+      <?php if ( is_active_sidebar( 'secondary' ) ) : ?>
+          <?php dynamic_sidebar( 'secondary' ); ?>
+      <?php else : ?>
+          <!-- Time to add some widgets! -->
+      <?php endif; ?>
   </div>
 
 

@@ -1,16 +1,16 @@
-<div class="">
+<div>
 <?php
 if (have_posts()) :
   while (have_posts()):
     the_post();
   ?>
-    <div class="card  mb-3 ">
+    <div class="card mb-3">
       <div class="card-body">
 
         <?php if(has_post_thumbnail()): ?>
             <!-- This has a featured image -->
             <div>
-              <img src="<?php the_post_thumbnail_url('blog-small'); ?>" alt="<?php the_title(); ?>" class="mb-3 img-fluid img-thumbnail">
+              <img src="<?php the_post_thumbnail_url('blog-large'); ?>" alt="<?php the_title(); ?>" class="center mb-3 img-fluid img-thumbnail">
             </div>
       <?php endif; ?>
 
@@ -19,8 +19,8 @@ if (have_posts()) :
     <?php
     the_excerpt();//cut of some portion of text
     ?>
-    <div class="mx-auto">
-      <a href="<?php the_permalink(); ?>" class="text-light btn btn-dark text-center"> Read More </a>
+    <div class="text-center">
+      <a href="<?php the_permalink(); ?>" class="text-light btn btn-dark text-center btn-font"> Read More </a>
     </div>
 
   </div>
