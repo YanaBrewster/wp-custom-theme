@@ -1,9 +1,8 @@
 <?php get_header(); ?>
 
-<section class="page-wrap">
 <div class="container">
 
-  <section class="row">
+  <div class="row mt-5">
 
     <div id="sidebar-secondary" class="sidebar col-lg-3 col-sm-12">
         <?php if ( is_active_sidebar( 'primary' ) ) : ?>
@@ -14,16 +13,16 @@
 
     <div class="col-lg-8 col-sm-12">
 
-      <h1> <?php echo single_cat_title(); ?> </h1>
+      <h1 class="myHeadings"> <?php echo single_cat_title(); ?> </h1>
       <?php get_template_part('includes/section','archive'); ?>
 
    <?php previous_posts_link();  ?>
    <?php next_posts_link();  ?>
 
-
-
    </div>
-</section>
+
+ </div>
+
 </div>
-</section>
+
 <?php get_footer(); ?>

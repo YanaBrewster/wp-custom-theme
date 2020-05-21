@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section>
-<div class="row">
+<div class="row mt-5">
 
   <div id="sidebar-primary" class="col-lg-3 col-sm-12 sidebar">
       <?php if ( is_active_sidebar( 'primary' ) ) : ?>

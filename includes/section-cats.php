@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-5">
   <?php
   if (have_posts()) :
     while (have_posts()):
@@ -13,7 +13,7 @@
             <!-- featured image -->
             <?php if(has_post_thumbnail()): ?>
               <!-- This has a featured image -->
-                <img src="<?php the_post_thumbnail_url('blog-large'); ?>" alt="<?php the_title(); ?>" class="mb-3 img-fluid img-thumbnail">
+              <img src="<?php the_post_thumbnail_url('blog-large'); ?>" alt="<?php the_title(); ?>" class="mb-3 img-fluid img-thumbnail">
             <?php endif; ?>
           </a>
 

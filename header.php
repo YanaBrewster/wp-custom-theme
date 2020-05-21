@@ -7,18 +7,7 @@
 </head>
 <body>
 
-  <header class="bg-yellow px-2 py-2 mb-5">
-
-    <!-- optional header section -->
-    <?php if ( get_header_image() ) : ?>
-
-      <div id="site-header">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-          <img alt="" src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>">
-        </a>
-      </div>
-
-    <?php endif; ?>
+  <header class="myTheme bg-yellow px-2 py-2">
 
     <!-- main top naivation -->
     <nav class="top-nav navbar-expand-lg px-2 py-2">
@@ -26,55 +15,48 @@
       <div class="row">
 
         <!-- logo -->
-        <div class="col-3 col-lg-3 col-sm-3">
+        <div class="col-8 col-lg-3 col-sm-8">
           <a class="navbar-brand" href="#">
-            <?php  the_custom_logo();  ?>
+              <?php  the_custom_logo();  ?>
+              <?php ?>
+            <h1 class="text-light siteTitle myTheme d-inline ml-3 h3"> <?php echo get_theme_mod('Formative4_siteTitleText'); ?></h1>
           </a>
         </div>
 
         <!-- menu -->
-        <div class="col-9 col-lg-6 col-sm-9">
+        <div class="col-4 col-lg-6 col-sm-4">
 
-          <button class="navbar-toggler navbar-dark float-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <nav class="navbar navbar-expand-md center" role="navigation">
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="nav">
-              <div class="nav-list mt-4">
+              <button class="navbar-toggler navbar-dark mt-4" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
 
-                <?php
-                wp_nav_menu(
-                  array(
-                    'theme_location' => 'top-menu',
-                    'menu_class' => 'top-bar'
-                  )
-                );
-                ?>
+              <?php
+              wp_nav_menu( array(
+                'theme_location'    => 'top-menu',
+                'depth'             => 2,
+                'container'         => 'div',
+                'container_class'   => 'collapse navbar-collapse',
+                'container_id'      => 'bs-example-navbar-collapse-1',
+                'menu_class'        => 'nav navbar-nav',
+                'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                'walker'            => new WP_Bootstrap_Navwalker(),
+              ) );
+              ?>
 
-              </div>
-            </div>
-          </div>
+          </nav>
+          <!-- </div> -->
 
         </div>
 
         <!-- search -->
-        <div class="col-lg-3 d-none d-sm-none d-md-block">
+        <div class="col-lg-3 d-none d-sm-none d-md-block mt-4">
           <?php get_search_form(); ?>
         </div>
 
       </div>   <!-- end of row -->
 
-      <div class="row">
-        <!-- title tagline etc -->
-        <div class="col-12 col-lg-12 col-sm-12">
-          <h5 class="text-dark mt-3">
-            <?php echo get_option('blogname'); // For Site Name?> |
-            <?php echo get_option('blogdescription'); // For Tag line or description?>
-          </h5>
-        </div>
-
-      </div>
 
     </nav>
 

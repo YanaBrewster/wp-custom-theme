@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 
-<section class="page-wrap">
-<div class="container">
-
+<div class="container mt-4">
+<div class="row">
   <div id="sidebar-primary" class="sidebar col-lg-3 col-sm-12">
       <?php if ( is_active_sidebar( 'primary' ) ) : ?>
           <?php dynamic_sidebar( 'primary' ); ?>
@@ -10,12 +9,13 @@
       <?php endif; ?>
   </div>
 
+  <div class="col-lg-9 col-sm-12">
     <?php if(has_post_thumbnail()): ?>
         <!-- This has a featured image -->
 
   <?php endif; ?>
 
-     <h1> <?php the_title(); ?>  </h1>
+     <h1 class="myHeadings"> <?php the_title(); ?>  </h1>
       <?php get_template_part('includes/section','cats'); ?>
          <?php wp_link_pages(); ?>
 
@@ -27,9 +27,9 @@
               <li> Name: <?php echo get_post_meta($post->ID, 'name', true); ?> </li>
            <?php endif; ?>
          </ul>
-
-
+  </div>
 
 </div>
-</section>
+</div>
+
 <?php get_footer(); ?>

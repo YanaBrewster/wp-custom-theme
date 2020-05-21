@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 
-<section class="page-wrap">
-<div class="container">
+
+<div class="container mt-5">
 
   <section class="row">
 
     <div class="col-lg-9">
 
-      <h1> <?php the_title(); ?>   </h1>
+      <h1 class="myHeadings mb-5"> <?php the_title(); ?> </h1>
 
       <?php if(has_post_thumbnail()): ?>
 
@@ -19,5 +19,5 @@
       <?php get_template_part('includes/section','content'); ?>
     </div>
 </div>
-</section>
+
 <?php get_footer(); ?>

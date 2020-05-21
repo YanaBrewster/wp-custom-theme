@@ -24,9 +24,11 @@ color: #ffce3b;
 font-family: 'Roboto Slab', serif;
 }
 
-li, a{
+ li, a{
 font-family: 'Roboto', sans-serif;
 color: #333;
+list-style-type: none;
+font-size: 1.25em;
 }
 
 /* Background Colours */
@@ -47,19 +49,48 @@ padding-right: 20px;
 
 }
 
-.top-nav{
-  color: white;
-}
-
-li, a{
-list-style-type: none;
-font-size: 1.25em;
-}
-
 /* Layout */
 
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.headerImage{
+    width: 100vw;
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* WooCommerce */
+
+.billingFields .form-row{
+    width: 100% !important;
+}
+
+.billingFields .form-row .woocommerce-input-wrapper{
+    width: 100% !important;
+}
+
+.billingFields .form-row .woocommerce-input-wrapper input,
+.billingFields .form-row .woocommerce-input-wrapper select{
+    height: calc(1.5em + .75rem + 2px) !important;
+    padding: .375rem .75rem !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+}
+
+.billingFields .form-row .woocommerce-input-wrapper textarea{
+    min-height: 200px !important;
+    max-height: 800px !important;
+    padding: .375rem .75rem !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
 }

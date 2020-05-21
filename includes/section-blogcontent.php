@@ -1,4 +1,4 @@
-<div class="">
+
 <?php
 if (have_posts()) :
   while (have_posts()):
@@ -14,30 +14,48 @@ if (have_posts()) :
     the_content();
     // the_author();
 ?>
+
 <?php
   $fname = get_the_author_meta('first_name');
   $lname = get_the_author_meta('last_name');
   ?>
-  <p class="text-light"> <?php echo 'Posted by ' . $fname . ' ' . $lname; ?> </p>
+  <p class="font-italic"> <?php echo 'Posted by ' . $fname . ' ' . $lname; ?> </p>
   <?php
     $tags = get_the_tags();
+    ?>
+      <p><b> Tags:
+        <?php
+        echo ' ';
+    if($tags):
     foreach($tags as $tag):?>
-      <a class="text-light" href="<?php echo get_tag_link($tag -> term_id);  ?>">
-        <?php echo $tag -> name; ?>
+
+      <a class="text-dark mr-5" href="<?php echo get_tag_link($tag -> term_id);  ?>">
+        <?php echo  $tag -> name; ?>
       </a>
 
-<?php endforeach; ?>
+<?php endforeach;
+else:
+endif;
+?>
+</b></p>
 
 <?php
   $categories = get_the_category();
+  ?>
+    <p><b> Categories:
+      <?php
+      echo ' ';
   foreach($categories as $cat):?>
 
-  <a class="text-light" href="<?php echo get_category_link($cat->term_id); ?>">
+  <a href="<?php echo get_category_link($cat->term_id); ?>">
     <?php echo $cat->name; //go and add single_cat_title() in archive ?>
   </a>
-<?php endforeach; ?>
 
-<?php// comments_template();?>
+<?php endforeach; ?>
+</b></p>
+
+
+<?php //comments_template();?>
 <!-- /to get multiple parts of a page add this in single.php -->
 
 <?php
@@ -47,4 +65,3 @@ if (have_posts()) :
 endif;
 
 ?>
-</div>

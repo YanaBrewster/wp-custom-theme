@@ -2,7 +2,7 @@
 
 <section>
 <div class="container">
-<div class="row">
+<div class="row mt-4">
 
   <div id="sidebar-secondary" class="sidebar col-lg-3 col-sm-12">
       <?php if ( is_active_sidebar( 'secondary' ) ) : ?>

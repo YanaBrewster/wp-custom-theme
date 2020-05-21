@@ -4,7 +4,7 @@ if (have_posts()) :
   while (have_posts()):
     the_post();
   ?>
-    <div class="card mb-3">
+    <div class="card mt-4 mb-3">
       <div class="card-body">
 
         <?php if(has_post_thumbnail()): ?>
@@ -14,7 +14,7 @@ if (have_posts()) :
             </div>
       <?php endif; ?>
 
-    <h1> <?php the_title(); ?>   </h1>
+    <h1 class="myHeadings"> <?php the_title(); ?>   </h1>
 
     <?php
     the_excerpt();//cut of some portion of text
