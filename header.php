@@ -9,26 +9,26 @@
 
   <header class="myTheme bg-yellow px-2 py-2">
 
-    <!-- main top naivation -->
+    <!-- main top navigation -->
     <nav class="top-nav navbar-expand-lg px-2 py-2">
 
       <div class="row">
 
         <!-- logo -->
-        <div class="col-8 col-lg-3 col-sm-8">
+        <div class="col-3 col-lg-3 col-sm-3">
           <a class="navbar-brand" href="#">
-              <?php  the_custom_logo();  ?>
-              <?php ?>
-            <h1 class="text-light siteTitle myTheme d-inline ml-3 h3"> <?php echo get_theme_mod('Formative4_siteTitleText'); ?></h1>
+            <?php  the_custom_logo();  ?>
+            <?php ?>
+            <h1 class="hide text-light siteTitle myTheme d-inline ml-3 h3"> <?php echo get_theme_mod('Formative4_siteTitleText'); ?></h1>
           </a>
         </div>
 
         <!-- menu -->
-        <div class="col-4 col-lg-6 col-sm-4">
+        <div class="col-9 col-lg-6 col-sm-9">
 
-          <nav class="navbar navbar-expand-md center" role="navigation">
+          <nav class="navbar navbar-expand-md center mt-3" role="navigation">
 
-              <button class="navbar-toggler navbar-dark mt-4" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler navbar-dark mt-5" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
 
@@ -38,7 +38,7 @@
                 'depth'             => 2,
                 'container'         => 'div',
                 'container_class'   => 'collapse navbar-collapse',
-                'container_id'      => 'bs-example-navbar-collapse-1',
+                'container_id'      => 'top-menu-navbar-collapse',
                 'menu_class'        => 'nav navbar-nav',
                 'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                 'walker'            => new WP_Bootstrap_Navwalker(),

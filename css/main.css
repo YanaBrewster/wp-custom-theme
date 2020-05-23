@@ -41,13 +41,6 @@ background-color: #3333;
 background-color: #ffce3b;
 }
 
-/* Nav */
-
-.menu-item{
-display: inline-flex;
-padding-right: 20px;
-
-}
 
 /* Layout */
 
@@ -69,28 +62,6 @@ padding-right: 20px;
 
 /* WooCommerce */
 
-.billingFields .form-row{
-    width: 100% !important;
-}
-
-.billingFields .form-row .woocommerce-input-wrapper{
-    width: 100% !important;
-}
-
-.billingFields .form-row .woocommerce-input-wrapper input,
-.billingFields .form-row .woocommerce-input-wrapper select{
-    height: calc(1.5em + .75rem + 2px) !important;
-    padding: .375rem .75rem !important;
-    font-size: 1rem !important;
-    font-weight: 400 !important;
-    line-height: 1.5 !important;
-}
-
-.billingFields .form-row .woocommerce-input-wrapper textarea{
-    min-height: 200px !important;
-    max-height: 800px !important;
-    padding: .375rem .75rem !important;
-    font-size: 1rem !important;
-    font-weight: 400 !important;
-    line-height: 1.5 !important;
+.woocommerce-checkout .col-1, .woocommerce-checkout .col-2 {
+    max-width: inherit;
 }

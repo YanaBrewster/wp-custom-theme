@@ -1,5 +1,5 @@
 <footer class="bg-yellow myTheme px-3 py-3 mt-5">
-  <div class="myNavLinks">
+  <div class="inline-block">
     <?php
     wp_nav_menu(
       array(
