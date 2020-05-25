@@ -65,3 +65,29 @@ background-color: #ffce3b;
 .woocommerce-checkout .col-1, .woocommerce-checkout .col-2 {
     max-width: inherit;
 }
+
+/* Add to cart button colour */
+.woocommerce form.cart button.button {
+    color: red !important;
+}
+.woocommerce form.cart button.button:hover {
+    background-color: pink !important;
+}
+
+/* Checkout button colour */
+.woocommerce-cart .button {
+    background-color: #000 !important;
+}
+.woocommerce-cart .button:hover {
+    background-color: #777 !important;
+}
+
+
+.woocommerce .single-product .product .single_add_to_cart_button.button{
+	background-color: pink;
+	color: #FFFFFF;
+}
+.woocommerce .product .add_to_cart_button.button{
+	background-color: red;
+	color: #FFFFFF;
+}
