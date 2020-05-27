@@ -18,7 +18,7 @@
      <h1 class="myHeadings"> <?php the_title(); ?>  </h1>
       <?php get_template_part('includes/section','cats'); ?>
          <?php wp_link_pages(); ?>
-
+         <?php  echo get_the_date('F j, Y g:i a'); //check php date format ?>
          <!-- wordpress custom field -->
 
          <ul>

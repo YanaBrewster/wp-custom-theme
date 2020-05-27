@@ -6,7 +6,8 @@ if (have_posts()) :
 ?>
 
 <p>
-<?php  echo get_the_date('l, h:i:s d/m/Y'); //check php date format ?>
+<?php  echo get_the_date('F j, Y g:i a'); //check php date format ?>
+
 </p>
 
 

@@ -15,7 +15,7 @@ if (have_posts()) :
       <?php endif; ?>
 
     <h1 class="myHeadings"> <?php the_title(); ?>   </h1>
-
+    <p><?php  echo get_the_date('F j, Y g:i a'); //check php date format ?></p>
     <?php
     the_excerpt();//cut of some portion of text
     ?>
